@@ -90,6 +90,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut2-G8-wvg">
                                 <rect key="frame" x="127" y="318" width="102" height="30"/>
                                 <state key="normal" title="Finalizar Demo"/>
+                                <connections>
+                                    <action selector="finishDemo:" destination="xg7-CZ-xcn" eventType="touchUpInside" id="lKd-90-I3C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,6 +106,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zix-sn-b8s"/>
                     </view>
+                    <connections>
+                        <outlet property="finishDemoBTN" destination="ut2-G8-wvg" id="1yc-6s-Mz2"/>
+                        <outlet property="titleLB" destination="tVu-h4-tFb" id="LmA-Nu-j01"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wk-xP-Fgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,6 +13,7 @@
 		0D7AA7912176C1F9002656EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7AA7902176C1F9002656EC /* Assets.xcassets */; };
 		0D7AA7942176C1F9002656EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7AA7922176C1F9002656EC /* LaunchScreen.storyboard */; };
 		0D7AA79F2176C1F9002656EC /* ProyectRobotsPatternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7AA79E2176C1F9002656EC /* ProyectRobotsPatternUITests.swift */; };
+		CF1C55F92179180A004A8D2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1C55F821791809004A8D2E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		0D7AA79A2176C1F9002656EC /* ProyectRobotsPatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProyectRobotsPatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7AA79E2176C1F9002656EC /* ProyectRobotsPatternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectRobotsPatternUITests.swift; sourceTree = "<group>"; };
 		0D7AA7A02176C1F9002656EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1C55F821791809004A8D2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				0D7AA7902176C1F9002656EC /* Assets.xcassets */,
 				0D7AA7922176C1F9002656EC /* LaunchScreen.storyboard */,
 				0D7AA7952176C1F9002656EC /* Info.plist */,
+				CF1C55F821791809004A8D2E /* DetailViewController.swift */,
 			);
 			path = ProyectRobotsPattern;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1C55F92179180A004A8D2E /* DetailViewController.swift in Sources */,
 				0D7AA78C2176C1F6002656EC /* ViewController.swift in Sources */,
 				0D7AA78A2176C1F6002656EC /* AppDelegate.swift in Sources */,
 			);

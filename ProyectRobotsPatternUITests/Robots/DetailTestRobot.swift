@@ -10,6 +10,7 @@ import XCTest
 
 class DetailTestRobot : BaseTestRobot {
     
+    @discardableResult
     func areLoadSuccess() -> Self{
         let detailViewTitle = app.staticTexts[DetailConstants.titleIdentifier]
         XCTAssert(detailViewTitle.exists)

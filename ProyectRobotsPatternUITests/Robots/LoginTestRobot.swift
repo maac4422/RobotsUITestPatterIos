@@ -19,11 +19,13 @@ class LoginTestRobot : BaseTestRobot {
         return self
     }
     
+    @discardableResult
     func pressLoginButton() -> Self{
         pressButton(LoginConstants.loginButtonIdentifier)
         return self
     }
     
+    @discardableResult
     func matchErrorAlert(title expectedTitle: String,message expectedError: String) -> Self{
         let alertError = app.alerts
         XCTAssertEqual(alertError.element.label,expectedTitle)

@@ -14,7 +14,6 @@ final class KeyborardHelper {
     }
     
     static func closeKeyboard(app: XCUIApplication){
-        app.keyboards.buttons["Hide keyboard"]
         let firstKey = app.keys.element(boundBy: 0)
         if firstKey.exists {
             app.typeText("\n")

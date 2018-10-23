@@ -10,17 +10,17 @@ import XCTest
 class LoginTestRobot : BaseTestRobot {
     
     func setUsername(_ username: String) -> Self {
-        fillTextField(textFieldIdentifier: "Username", value: username)
+        fillTextField(textFieldIdentifier: LoginConstants.usernameIdentifier, value: username)
         return self
     }
     
     func setPassword(_ password: String) -> Self{
-        fillTextField(textFieldIdentifier: "Password", value: password,isSecure: true)
+        fillTextField(textFieldIdentifier: LoginConstants.passwordIdentifier, value: password,isSecure: true)
         return self
     }
     
     func pressLoginButton() -> Self{
-        pressButton("Login")
+        pressButton(LoginConstants.loginButtonIdentifier)
         return self
     }
     

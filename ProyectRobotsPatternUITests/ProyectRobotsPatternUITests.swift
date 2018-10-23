@@ -43,7 +43,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //act
         loginTestRobot
             .pressLoginButton()
-            .matchErrorAlert(title: "Error",message: "The fields must be complete!")
+            .matchErrorAlert(title: LoginConstants.errorTitle,message: LoginConstants.messageFieldIncompleted)
         
         //assert
         
@@ -57,7 +57,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         loginTestRobot
             .setUsername(userName)
             .pressLoginButton()
-            .matchErrorAlert(title: "Error",message: "The fields must be complete!")
+            .matchErrorAlert(title: LoginConstants.errorTitle,message: LoginConstants.messageFieldIncompleted)
         //assert
         
     }
@@ -87,7 +87,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
             .setUsername(userName)
             .setPassword(password)
             .pressLoginButton()
-            .matchErrorAlert(title: "Error",message: "User or Password incorrect!")
+            .matchErrorAlert(title: LoginConstants.errorTitle,message: LoginConstants.messageIncorrectCredentials)
         
         //assert
         

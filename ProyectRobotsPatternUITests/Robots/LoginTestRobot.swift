@@ -10,24 +10,17 @@ import XCTest
 class LoginTestRobot : BaseTestRobot {
     
     func setUsername(_ username: String) -> Self {
-        let loginTextEntry = app.textFields["Username"]
-        loginTextEntry.tap()
-        loginTextEntry.typeText(username)
-        KeyborardHelper.closeKeyboard(app: app)
+        fillTextField(textFieldIdentifier: "Username", value: username)
         return self
     }
     
     func setPassword(_ password: String) -> Self{
-        let passwordTextEntry = app.secureTextFields["Password"]
-        passwordTextEntry.tap()
-        passwordTextEntry.typeText(password)
-        KeyborardHelper.closeKeyboard(app: app)
+        fillTextField(textFieldIdentifier: "Password", value: password,isSecure: true)
         return self
     }
     
     func pressLoginButton() -> Self{
-        let loginButton = app.buttons["Login"]
-        loginButton.tap()
+        pressButton("Login")
         return self
     }
     

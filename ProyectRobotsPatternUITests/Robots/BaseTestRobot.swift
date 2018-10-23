@@ -19,6 +19,7 @@ class BaseTestRobot {
         let textField = isSecure! ? app.secureTextFields[textFieldIdentifier] : app.textFields[textFieldIdentifier]
         textField.tap()
         textField.typeText(value)
+        KeyborardHelper.closeKeyboard(app: app)
     }
     
     func pressButton(_ buttonIdentifier: String){

@@ -41,10 +41,12 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //arrange
         
         //act
-        loginTestRobot.pressLoginButton()
+        loginTestRobot
+            .pressLoginButton()
+            .matchErrorAlert(title: "Error",message: "The fields must be complete!")
         
         //assert
-        loginTestRobot.matchErrorAlert(title: "Error",message: "The fields must be complete!")
+        
     }
     
     func testLoginWithOneFieldEmpty(){
@@ -52,11 +54,12 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let userName = "user"
         
         //act
-        loginTestRobot.setUsername(userName)
-        loginTestRobot.pressLoginButton()
-        
+        loginTestRobot
+            .setUsername(userName)
+            .pressLoginButton()
+            .matchErrorAlert(title: "Error",message: "The fields must be complete!")
         //assert
-        loginTestRobot.matchErrorAlert(title: "Error",message: "The fields must be complete!")
+        
     }
     
     func testLoginWithCorrectCredentials(){
@@ -65,9 +68,10 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let password = "123"
         
         //act
-        loginTestRobot.setUsername(userName)
-        loginTestRobot.setPassword(password)
-        loginTestRobot.pressLoginButton()
+        loginTestRobot
+            .setUsername(userName)
+            .setPassword(password)
+            .pressLoginButton()
         
         //assert
         detailTestRobot.areLoadSuccess()
@@ -79,12 +83,13 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let password = "1234"
         
         //act
-        loginTestRobot.setUsername(userName)
-        loginTestRobot.setPassword(password)
-        loginTestRobot.pressLoginButton()
+        loginTestRobot
+            .setUsername(userName)
+            .setPassword(password)
+            .pressLoginButton()
+            .matchErrorAlert(title: "Error",message: "User or Password incorrect!")
         
         //assert
-        loginTestRobot.matchErrorAlert(title: "Error",message: "User or Password incorrect!")
+        
     }
-    
 }

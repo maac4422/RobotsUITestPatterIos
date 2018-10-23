@@ -14,28 +14,32 @@ class LoginTestRobot {
         self.app = app
     }
     
-    func setUsername(_ username: String) {
+    func setUsername(_ username: String) -> Self {
         let loginTextEntry = app.textFields["Username"]
         loginTextEntry.tap()
         loginTextEntry.typeText(username)
         KeyborardHelper.closeKeyboard(app: app)
+        return self
     }
     
-    func setPassword(_ password: String){
+    func setPassword(_ password: String) -> Self{
         let passwordTextEntry = app.secureTextFields["Password"]
         passwordTextEntry.tap()
         passwordTextEntry.typeText(password)
         KeyborardHelper.closeKeyboard(app: app)
+        return self
     }
     
-    func pressLoginButton(){
+    func pressLoginButton() -> Self{
         let loginButton = app.buttons["Login"]
         loginButton.tap()
+        return self
     }
     
-    func matchErrorAlert(title expectedTitle: String,message expectedError: String){
+    func matchErrorAlert(title expectedTitle: String,message expectedError: String) -> Self{
         let alertError = app.alerts
         XCTAssertEqual(alertError.element.label,expectedTitle)
         XCTAssert(alertError.element.staticTexts[expectedError].exists)
+        return self
     }
 }

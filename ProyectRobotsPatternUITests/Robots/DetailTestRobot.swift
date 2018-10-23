@@ -15,8 +15,9 @@ class DetailTestRobot {
         self.app = app
     }
     
-    func areLoadSuccess(){
+    func areLoadSuccess() -> Self{
         let detailViewTitle = app.staticTexts["DETALLE MEDELLIN iOS"]
         XCTAssert(detailViewTitle.exists)
+        return self
     }
 }

@@ -13,6 +13,7 @@ class LoginTestRobot {
     init(app: XCUIApplication) {
         self.app = app
     }
+    
     func setUsername(_ username: String) {
         let loginTextEntry = app.textFields["Username"]
         loginTextEntry.tap()
@@ -30,5 +31,11 @@ class LoginTestRobot {
     func pressLoginButton(){
         let loginButton = app.buttons["Login"]
         loginButton.tap()
+    }
+    
+    func matchErrorAlert(title expectedTitle: String,message expectedError: String){
+        let alertError = app.alerts
+        XCTAssertEqual(alertError.element.label,expectedTitle)
+        XCTAssert(alertError.element.staticTexts[expectedError].exists)
     }
 }

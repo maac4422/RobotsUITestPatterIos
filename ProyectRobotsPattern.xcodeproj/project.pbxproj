@@ -17,6 +17,7 @@
 		CF548F66217F6F2C00E9AA04 /* BaseTestRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */; };
 		CF548F68217F729C00E9AA04 /* LoginTestRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */; };
 		CF548F6B217F745700E9AA04 /* KeyborardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F6A217F745700E9AA04 /* KeyborardHelper.swift */; };
+		CF548F6D217F7C6500E9AA04 /* DetailTestRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F6C217F7C6500E9AA04 /* DetailTestRobot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestRobot.swift; sourceTree = "<group>"; };
 		CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestRobot.swift; sourceTree = "<group>"; };
 		CF548F6A217F745700E9AA04 /* KeyborardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyborardHelper.swift; sourceTree = "<group>"; };
+		CF548F6C217F7C6500E9AA04 /* DetailTestRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTestRobot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			children = (
 				CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */,
 				CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */,
+				CF548F6C217F7C6500E9AA04 /* DetailTestRobot.swift */,
 			);
 			path = Robots;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				0D7AA79F2176C1F9002656EC /* ProyectRobotsPatternUITests.swift in Sources */,
 				CF548F66217F6F2C00E9AA04 /* BaseTestRobot.swift in Sources */,
 				CF548F6B217F745700E9AA04 /* KeyborardHelper.swift in Sources */,
+				CF548F6D217F7C6500E9AA04 /* DetailTestRobot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameTF.delegate = self
+        passwordTF.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -48,6 +50,11 @@ class ViewController: UIViewController {
     
     func goToDetailPage(){
         performSegue(withIdentifier: "moveToDetailSegue", sender: self)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        return true
     }
 }
 

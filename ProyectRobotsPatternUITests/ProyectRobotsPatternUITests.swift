@@ -9,6 +9,8 @@
 import XCTest
 
 class ProyectRobotsPatternUITests: XCTestCase {
+    
+    
     var app: XCUIApplication!
     
     override func setUp() {
@@ -53,7 +55,9 @@ class ProyectRobotsPatternUITests: XCTestCase {
         
         //act
         loginTextEntry.tap()
+        
         loginTextEntry.typeText(userName)
+        closeKeyboard()
         loginButton.tap()
         
         //assert
@@ -73,8 +77,10 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //act
         loginTextEntry.tap()
         loginTextEntry.typeText(userName)
+        closeKeyboard()
         passwordTextEntry.tap()
         passwordTextEntry.typeText(password)
+        closeKeyboard()
         loginButton.tap()
         
         //assert
@@ -93,13 +99,23 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //act
         loginTextEntry.tap()
         loginTextEntry.typeText(userName)
+        closeKeyboard()
         passwordTextEntry.tap()
         passwordTextEntry.typeText(password)
+        closeKeyboard()
         loginButton.tap()
         
         //assert
         XCTAssertEqual(alertError.element.label,"Error")
         XCTAssert(alertError.element.staticTexts["User or Password incorrect!"].exists)
+    }
+    
+    func closeKeyboard() {
+        app.keyboards.buttons["Hide keyboard"]
+        let firstKey = app.keys.element(boundBy: 0)
+        if firstKey.exists {
+            app.typeText("\n")
+        }
     }
     
 }

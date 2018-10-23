@@ -9,15 +9,21 @@
 import XCTest
 
 class BaseTestRobot {
+    var app: XCUIApplication!
     
-    func fillTextField(app: XCUIApplication,textFieldIdentifier: String,value: String, isSecure: Bool? = false){
+    init(app: XCUIApplication) {
+        self.app = app
+    }
+    
+    func fillTextField(textFieldIdentifier: String,value: String, isSecure: Bool? = false){
         let textField = isSecure! ? app.secureTextFields[textFieldIdentifier] : app.textFields[textFieldIdentifier]
         textField.tap()
         textField.typeText(value)
     }
     
-    func clickButton(){
-        
+    func pressButton(_ buttonIdentifier: String){
+        let button = app.buttons[buttonIdentifier]
+        button.tap()
     }
     
 }

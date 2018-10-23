@@ -7,12 +7,7 @@
 //
 
 import XCTest
-class LoginTestRobot {
-    var app: XCUIApplication!
-    
-    init(app: XCUIApplication) {
-        self.app = app
-    }
+class LoginTestRobot : BaseTestRobot {
     
     func setUsername(_ username: String) -> Self {
         let loginTextEntry = app.textFields["Username"]

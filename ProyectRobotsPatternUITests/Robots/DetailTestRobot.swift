@@ -8,12 +8,7 @@
 
 import XCTest
 
-class DetailTestRobot {
-    var app: XCUIApplication!
-    
-    init(app: XCUIApplication) {
-        self.app = app
-    }
+class DetailTestRobot : BaseTestRobot {
     
     func areLoadSuccess() -> Self{
         let detailViewTitle = app.staticTexts["DETALLE MEDELLIN iOS"]

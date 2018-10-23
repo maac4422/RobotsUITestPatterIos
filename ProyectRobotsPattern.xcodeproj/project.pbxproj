@@ -14,6 +14,9 @@
 		0D7AA7942176C1F9002656EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7AA7922176C1F9002656EC /* LaunchScreen.storyboard */; };
 		0D7AA79F2176C1F9002656EC /* ProyectRobotsPatternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7AA79E2176C1F9002656EC /* ProyectRobotsPatternUITests.swift */; };
 		CF1C55F92179180A004A8D2E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1C55F821791809004A8D2E /* DetailViewController.swift */; };
+		CF548F66217F6F2C00E9AA04 /* BaseTestRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */; };
+		CF548F68217F729C00E9AA04 /* LoginTestRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */; };
+		CF548F6B217F745700E9AA04 /* KeyborardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF548F6A217F745700E9AA04 /* KeyborardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		0D7AA79E2176C1F9002656EC /* ProyectRobotsPatternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectRobotsPatternUITests.swift; sourceTree = "<group>"; };
 		0D7AA7A02176C1F9002656EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1C55F821791809004A8D2E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestRobot.swift; sourceTree = "<group>"; };
+		CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestRobot.swift; sourceTree = "<group>"; };
+		CF548F6A217F745700E9AA04 /* KeyborardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyborardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +99,29 @@
 		0D7AA79D2176C1F9002656EC /* ProyectRobotsPatternUITests */ = {
 			isa = PBXGroup;
 			children = (
+				CF548F69217F744600E9AA04 /* Helpers */,
+				CF548F64217F6F1600E9AA04 /* Robots */,
 				0D7AA79E2176C1F9002656EC /* ProyectRobotsPatternUITests.swift */,
 				0D7AA7A02176C1F9002656EC /* Info.plist */,
 			);
 			path = ProyectRobotsPatternUITests;
+			sourceTree = "<group>";
+		};
+		CF548F64217F6F1600E9AA04 /* Robots */ = {
+			isa = PBXGroup;
+			children = (
+				CF548F65217F6F2C00E9AA04 /* BaseTestRobot.swift */,
+				CF548F67217F729C00E9AA04 /* LoginTestRobot.swift */,
+			);
+			path = Robots;
+			sourceTree = "<group>";
+		};
+		CF548F69217F744600E9AA04 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF548F6A217F745700E9AA04 /* KeyborardHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF548F68217F729C00E9AA04 /* LoginTestRobot.swift in Sources */,
 				0D7AA79F2176C1F9002656EC /* ProyectRobotsPatternUITests.swift in Sources */,
+				CF548F66217F6F2C00E9AA04 /* BaseTestRobot.swift in Sources */,
+				CF548F6B217F745700E9AA04 /* KeyborardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

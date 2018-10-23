@@ -12,6 +12,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
     
     
     var app: XCUIApplication!
+    var loginTestRobot: LoginTestRobot!
     
     override func setUp() {
         super.setUp()
@@ -22,6 +23,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         app = XCUIApplication()
+        loginTestRobot = LoginTestRobot(app: app)
         app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -35,11 +37,10 @@ class ProyectRobotsPatternUITests: XCTestCase {
     
     func testLoginWithEmptyFields() {
         //arrange
-        let loginButton = app.buttons["Login"]
         let alertError = app.alerts
         
         //act
-        loginButton.tap()
+        loginTestRobot.pressLoginButton()
         
         //assert
         XCTAssertEqual(alertError.element.label,"Error")
@@ -49,16 +50,11 @@ class ProyectRobotsPatternUITests: XCTestCase {
     func testLoginWithOneFieldEmpty(){
         //arrange
         let userName = "user"
-        let loginTextEntry = app.textFields["Username"]
-        let loginButton = app.buttons["Login"]
         let alertError = app.alerts
         
         //act
-        loginTextEntry.tap()
-        
-        loginTextEntry.typeText(userName)
-        closeKeyboard()
-        loginButton.tap()
+        loginTestRobot.setUsername(userName)
+        loginTestRobot.pressLoginButton()
         
         //assert
         XCTAssertEqual(alertError.element.label,"Error")
@@ -69,19 +65,12 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //arrange
         let userName = "user"
         let password = "123"
-        let loginTextEntry = app.textFields["Username"]
-        let passwordTextEntry = app.secureTextFields["Password"]
-        let loginButton = app.buttons["Login"]
         let detailViewTitle = app.staticTexts["DETALLE MEDELLIN iOS"]
         
         //act
-        loginTextEntry.tap()
-        loginTextEntry.typeText(userName)
-        closeKeyboard()
-        passwordTextEntry.tap()
-        passwordTextEntry.typeText(password)
-        closeKeyboard()
-        loginButton.tap()
+        loginTestRobot.setUsername(userName)
+        loginTestRobot.setPassword(password)
+        loginTestRobot.pressLoginButton()
         
         //assert
         XCTAssert(detailViewTitle.exists)
@@ -91,31 +80,16 @@ class ProyectRobotsPatternUITests: XCTestCase {
         //arrange
         let userName = "user"
         let password = "1234"
-        let loginTextEntry = app.textFields["Username"]
-        let passwordTextEntry = app.secureTextFields["Password"]
-        let loginButton = app.buttons["Login"]
         let alertError = app.alerts
         
         //act
-        loginTextEntry.tap()
-        loginTextEntry.typeText(userName)
-        closeKeyboard()
-        passwordTextEntry.tap()
-        passwordTextEntry.typeText(password)
-        closeKeyboard()
-        loginButton.tap()
+        loginTestRobot.setUsername(userName)
+        loginTestRobot.setPassword(password)
+        loginTestRobot.pressLoginButton()
         
         //assert
         XCTAssertEqual(alertError.element.label,"Error")
         XCTAssert(alertError.element.staticTexts["User or Password incorrect!"].exists)
-    }
-    
-    func closeKeyboard() {
-        app.keyboards.buttons["Hide keyboard"]
-        let firstKey = app.keys.element(boundBy: 0)
-        if firstKey.exists {
-            app.typeText("\n")
-        }
     }
     
 }

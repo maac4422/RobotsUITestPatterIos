@@ -34,12 +34,14 @@ class ProyectRobotsPatternUITests: XCTestCase {
     func testLoginWithEmptyFields() {
         //arrange
         let loginButton = app.buttons["Login"]
+        let alertError = app.alerts
         
         //act
         loginButton.tap()
         
         //assert
-        let alertError = app.alerts["Error"]
+        XCTAssertEqual(alertError.element.label,"Error")
+        XCTAssert(alertError.element.staticTexts["The fields must be complete!"].exists)
     }
     
     func testLoginWithOneFieldEmpty(){
@@ -47,6 +49,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let userName = "user"
         let loginTextEntry = app.textFields["Username"]
         let loginButton = app.buttons["Login"]
+        let alertError = app.alerts
         
         //act
         loginTextEntry.tap()
@@ -54,7 +57,8 @@ class ProyectRobotsPatternUITests: XCTestCase {
         loginButton.tap()
         
         //assert
-        
+        XCTAssertEqual(alertError.element.label,"Error")
+        XCTAssert(alertError.element.staticTexts["The fields must be complete!"].exists)
     }
     
     func testLoginWithCorrectCredentials(){
@@ -64,6 +68,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let loginTextEntry = app.textFields["Username"]
         let passwordTextEntry = app.secureTextFields["Password"]
         let loginButton = app.buttons["Login"]
+        let detailViewTitle = app.staticTexts["DETALLE MEDELLIN iOS"]
         
         //act
         loginTextEntry.tap()
@@ -73,6 +78,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         loginButton.tap()
         
         //assert
+        XCTAssert(detailViewTitle.exists)
     }
     
     func testLoginWithIncorrectCredentials(){
@@ -82,6 +88,7 @@ class ProyectRobotsPatternUITests: XCTestCase {
         let loginTextEntry = app.textFields["Username"]
         let passwordTextEntry = app.secureTextFields["Password"]
         let loginButton = app.buttons["Login"]
+        let alertError = app.alerts
         
         //act
         loginTextEntry.tap()
@@ -91,6 +98,8 @@ class ProyectRobotsPatternUITests: XCTestCase {
         loginButton.tap()
         
         //assert
+        XCTAssertEqual(alertError.element.label,"Error")
+        XCTAssert(alertError.element.staticTexts["User or Password incorrect!"].exists)
     }
     
 }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProyectRobotsPatternUITests/ProyectRobotsPatternUITests.swift"
-            timestampString = "561996372.893293"
+            timestampString = "561997819.597163"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "testLoginWithEmptyFields()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProyectRobotsPatternUITests/ProyectRobotsPatternUITests.swift"
-            timestampString = "561996372.894153"
+            timestampString = "561997819.597834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "testLoginWithEmptyFields()"
             landmarkType = "7">
          </BreakpointContent>
